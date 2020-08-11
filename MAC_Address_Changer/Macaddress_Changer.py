@@ -2,7 +2,9 @@
 
 #Please note: All this is done for ethical purposes. Please stay within the law. 
 
-import subprocess
+import subprocess 
+import optparse 
+
 
 interface = input("Please input the name the interface you wish to change: ")
 mac_add = input("Enter your new mac address : ")
