@@ -1,1 +1,1 @@
-# Ethical_Hacking_In_Python
+# This repository will contain scripts on basic Ethical Hacking Tools writtine in Pyton.
