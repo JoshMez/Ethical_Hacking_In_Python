@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+
+import subprocess
+import optparse
+
+parser = optparse.OptionParser()
+
+parser.add_option("-i", "--interface", dest= "interface", help="Interface to change MAC Address")
+parser.add_option("-m", "--mac", dest="mac_add", help="Specify the new mac address")
+
+parser.parse_args()
+
+# subprocess.call("sudo ifconfig", shell=True)
+interface = input("Please input the name the interface you wish to change: ")
+mac_add = input("Enter your new mac address : ")
+
+
+subprocess.call(["sudo", "ifconfig", interface, "down"])
+subprocess.call(["sudo", "ifconfig", interface, "hw", "ether", mac_add])
+subprocess.call(["sudo", "ifconfig", interface, "up"])
+
+#Now to see if this has worked. On your Kali - Linux terminal type python MacAddressChanger.py --help, this should specify all the options avaliable and display the help needed. 
