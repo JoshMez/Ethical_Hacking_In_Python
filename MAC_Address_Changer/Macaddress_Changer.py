@@ -12,10 +12,10 @@ def get_arguments():  #This is to get the argument from the user
     (options, argument) =  parser.parse_args()
     if not options.interface :
         #code to handle error
-        parser.error("[-] Please enter a valid interface ")
+        parser.error("[-] Please enter a valid interface, use --help for more information ")
     elif not options.mac_add :
         #code to handle error
-        parser.error("[-] Please enter a valid mac address ")
+        parser.error("[-] Please enter a mac address, use --help for more information ")
 
 
 
