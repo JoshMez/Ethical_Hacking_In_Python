@@ -1,0 +1,14 @@
+#!/usr/bin/env python 
+
+#Please install the library pynput. 
+
+import pynput.keyboard  
+
+#Creating a function that will list the keys when they are being pressed. 
+def press_key(key): 
+  print(key) 
+ 
+with keyboard_list: 
+  keyboard_list.join()
+
+keyboard_list =pynput.keyboard.Listener(on_press=press_key)
